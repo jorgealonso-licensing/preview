@@ -14,7 +14,7 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: #1a1a1a;
-      line-height: 1.5;
+      line-height: 1.55;
       margin: 0;
       background: #f3f2ef;
     }
@@ -29,29 +29,42 @@
 
     h1 {
       font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-align: left;
+      font-weight: 650;
+      margin: 0 0 20px 0;
+      text-align: left; /* keep document-like */
     }
 
     p {
       font-size: 17px;
-      margin-bottom: 20px;
+      margin: 0 0 18px 0;
       text-align: left;
     }
 
     .hero-image {
       display: block;
-      margin: 0 auto 32px auto;
+      margin: 0 auto 28px auto;
       max-width: 100%;
       height: auto;
     }
 
+    .linkedin-card-wrap {
+      margin-top: 36px; /* pushes it down from the text */
+      text-align: center;
+    }
+
     .linkedin-card {
-  display: block;
-  margin: 24px auto 0 auto;
-  max-width: 260px;
-  height: auto;
+      display: inline-block;
+      max-width: 140px; /* smaller than before */
+      width: 100%;
+      height: auto;
+    }
+
+    /* Optional: slightly more breathing room on small screens */
+    @media (max-width: 480px) {
+      .container { padding: 36px 18px; }
+      h1 { font-size: 28px; line-height: 1.2; }
+      p { font-size: 18px; }
+      .linkedin-card { max-width: 160px; } /* can be a touch larger on mobile */
     }
   </style>
 </head>
@@ -60,29 +73,32 @@
   <div class="container">
 
     <!-- Hero Image -->
-    <img src="limited-overview.png" alt="Patent-pending roller shade concept" class="hero-image">
+    <img src="limited-overview.png"
+         alt="Patent-pending blackout roller shade — non-confidential overview"
+         class="hero-image">
 
     <!-- Headline -->
     <h1>Licensing Preview — Non-Confidential Overview</h1>
 
     <!-- Body Copy -->
     <p>
-      This page presents a non-confidential overview of a patent-pending window-covering concept developed for potential licensing to manufacturing partners. The concept has been prototyped and is intended for integration within existing OEM production workflows.
+      This page provides a non-confidential overview of a patent-pending blackout roller shade concept developed for potential licensing to established manufacturers. The concept has been prototyped and is intended to align with existing OEM production workflows.
     </p>
 
     <p>
-      The purpose of this page is to confirm the existence of a licensable product concept and to define a clear boundary between public information and proprietary technical materials.
+      The purpose of this page is to establish a clear boundary between public information and proprietary technical materials.
     </p>
 
-   <!-- CTA -->
     <p>
       Additional technical details, prototype evidence, and design specifics are shared selectively as discussions progress with qualified manufacturing partners.
     </p>
 
     <!-- LinkedIn Card Image -->
-    <a href="https://www.linkedin.com/in/jorge-alonso-chivite" target="_blank" rel="noopener">
-      <img src="return-to-linkedin.png" alt="Jorge Alonso – Mechanical Engineer" class="linkedin-card">
-    </a>
+    <div class="linkedin-card-wrap">
+      <a href="https://www.linkedin.com/in/jorge-alonso-chivite" target="_blank" rel="noopener noreferrer">
+        <img src="return-to-linkedin.png" alt="View Jorge Alonso on LinkedIn" class="linkedin-card">
+      </a>
+    </div>
 
   </div>
 </body>
